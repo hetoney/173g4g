@@ -1,0 +1,3 @@
+--查询显示每件商品的编号、名称以及利润，按利润从高到低进行排序
+--SalesPrice（售价）-PurchasePrice（进价）=利润 
+select Wid as 编号,Wname as 名字,SalesPrice-PurchasePrice as 利润 from Wareorder by SalesPrice-PurchasePrice desc--统计每件商品的销售量，显示商品名称及销售量，按销售量从高到低排序--1.--select Wname,sum(SalesAmount) as 销售量 from Ware w,SalesInfo swhere w.Wid=s.Wid group by Wname order by sum(SalesAmount) desc--2.--select w.wname,sum(s.salesAmount) as 销售量 from ware w,SalesInfo swhere w.wid=s.wid group by wname order by 销售量 desc--统计每类商品的销售量，显示商品类别及销售量select t.cname,sum(s.SalesAmount) as 销售量 from  Category t, ware w,SalesInfo swhere t.Cid=w.Cid and w.Wid=s.Wid  group by Cname--统计每种商品到目前的盈利总额select Wname,sum((SalesPrice-PurchasePrice)*SalesAmount) as 盈利总额from Ware w,SalesInfo swhere w.Wid=s.Wid group by Wname
