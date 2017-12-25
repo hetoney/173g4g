@@ -1,0 +1,8 @@
+select*from Category
+select*from Ware
+select*from Employee
+select*from SalesInfo
+--查询显示每件商品的编号,名称以及利润,按利润从高到低进行排序
+select wid,wname, SalesPrice-PurchasePrice as 利润 from Ware order by SalesPrice-PurchasePrice desc
+--统计每件商品的销售量,显示商品名称以及销售量,按销售量从高到低排序
+select Wname,sum(SalesAmount)as 销售量 from Ware w ,SalesInfo swhere w.wid=s.Wid group by Wname order by sum(SalesAmount ) desc--统计每类商品的销售量,显示商品类别以及销售量select cname,sum(SalesAmount)as 销售量 from Category c,Ware w,SalesInfo swhere c.cid=w.cid and w.wid=s.wid group by cname--统计每种商品到目前的盈利总额select wname,sum((SalesPrice-PurchasePrice)*SalesAmount)as 盈利总额 from Ware w,SalesInfo swhere w.wid=s.wid group by wname--收银员二号销售五件一号商品update Ware set Amount=Amount-5 where wid=10001insert into SalesInfo values('10001','2017-3-4','3','1003')--按照销售总额对收银员进行排序select ename,sum(SalesAmount*(SalesPrice-PurchasePrice)) as 销售总额 from Employee e,SalesInfo s,Ware w where e.Eid=s.eid and w.wid=s.wid group by e.ename order by 销售总额 desc--查询商品销售量排在前五名的商品名称及销量select top 5 wname,sum(SalesAmount) as 销量 from Ware w,SalesInfo swhere w.wid=s.wid group by wname order by 销量 desc--统计2017年商品销量排在前五名的商品名称及销量select top 5 wname,sum(SalesAmount) as 销量 from Ware w,SalesInfo swhere w.wid=s.wid and SalesDate between '2017-01-01' and '2017-12-31'group by wname order by 销量 desc--统计每个员工在2017年的销量,显示员工名称及销售数量select ename,sum(SalesAmount)as 销量 from Employee e,SalesInfo swhere e.eid=s.eid and SalesDate between '2017-01-01' and '2017-12-31'group by ename order by 销量 desc--统计2017年的总利润
