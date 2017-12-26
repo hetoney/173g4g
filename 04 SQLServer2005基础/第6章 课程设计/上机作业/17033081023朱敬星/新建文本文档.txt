@@ -1,0 +1,190 @@
+--新建数据库
+create database SuperMarket
+ on(
+name='SuprtMarket',
+filename='D:\SuprtMarket.mdf',
+size=3mb,
+maxsize=50MB,
+filegrowth=1mb
+)
+--新建日志
+log
+on(
+name='SuprtMarket_log',
+filename='D:\ SuprtMarket_log.ldf',
+size=3mb,
+maxsize=50MB,
+filegrowth=10%
+)
+drop database  SuperMarket
+
+
+
+
+--商品类别表
+create table Category
+(Cid int primary key identity(1,1),
+Cname  nvarchar(20) not null unique,
+Description nvarchar(200)
+)
+
+
+--商品信息表
+create table Ware
+(
+Wid int primary key , 
+Wname nvarchar(20) not null unique,
+Cid int foreign key references Category (Cid) not null,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+PurchasePrice float check(PurchasePrice>0),SalesPrice float check(SalesPrice>0),Amount float check (Amount>=0),
+ )
+
+
+--员工表
+create table Employee
+(Eid int  primary key identity(1001,1),
+ Ename nvarchar(20)not null,
+ Epassword nvarchar(20)check(len(Epassword)>5), Remark nvarchar(200),
+)
+
+
+--销售记录表
+create table SalesInfo(
+Sid int primary key identity(1,1),
+Wid int foreign key references Ware(Wid) not null,
+SalesDate datetime not null,SalesAmount int check(SalesAmount>0),Eid int  foreign key references Employee(Eid) not null,
+)
+
+
+
+
+
+
+
+
+
+
+--添加类别数据
+--步骤
+insert into Category values('家电类','')
+insert into Category values('日用类','')
+insert into Category values('食品类','')
+insert into Category values('饮品类','')
+insert into Category values('体育类','')
+
+
+
+--添加商品数据
+--步骤
+insert into Ware values('10010','美的空调','1','3000','4000','10')
+insert into Ware values('10011','美的电冰箱','1','5000','5500','9')
+insert into Ware values('10012','热水壶','2','20','32','100')
+insert into Ware values('10013','热水器','2','50','55','50')
+insert into Ware values('10014','热狗','3','1','2','10000')
+insert into Ware values('10015','卫龙','3','2.0','2.5','500')
+insert into Ware values('10016','可乐','4','2.5','3.0','999')
+insert into Ware values('10017','雪碧','4','2.5','3.0','999')
+insert into Ware values('10018','乒乓球拍','5','50','60','99')
+insert into Ware values('10019','羽毛球拍','5','100','111','50')
+
+
+
+--员工信息表
+--步骤
+insert into Employee values('张少博','111111','本店销售员')
+insert into Employee values('孙泽森','222222','本店销售员')
+
+
+--销售记录
+--步骤
+--1.空调销售
+Update Ware set Amount=Amount-8 where Wname='美的空调'
+insert into SalesInfo values('10010','2017-12-15','8','1002')
+--电冰箱销售
+Update Ware set Amount=Amount-5 where Wname='美的电冰箱'
+insert into SalesInfo values('10011','2017-12-20','5','1001')
+--热水壶销售
+Update Ware set Amount=Amount-89 where Wname='热水壶'
+insert into SalesInfo values('10012','2017-12-13','89','1002')
+--卫龙销售
+Update Ware set Amount=Amount-50 where Wname='卫龙'
+insert into SalesInfo values('10015','2017-12-19','50','1001')
+--乒乓球拍销售
+Update Ware set Amount=Amount-20 where Wname='乒乓球拍'
+insert into SalesInfo values('10018','2017-12-12','20','1001')
+
+
+--查询数据
+select * from Category
+select * from Ware
+select * from Employee
+select * from SalesInfo
+--删除数据表
+drop table Category                        
+drop table Ware
+drop table Employee
+drop table SalesInfo
+--删除表中数据
+delete from SalesInfo where sid='1'
+
+
+
+
+--查询显示每件商品的编号、名称以及利润，按利润从高到低进行排序
+--SalesPrice（售价）-PurchasePrice（进价）=利润 
+select Wid as 编号,Wname as 名字,SalesPrice-PurchasePrice as 利润 from Wareorder by SalesPrice-PurchasePrice desc
+--统计每件商品的销售量，显示商品名称及销售量，按销售量从高到低排序
+1.select Wname,sum(SalesAmount) as 销售量 from Ware w,SalesInfo swhere w.Wid=s.Wid group by Wname order by sum(SalesAmount) desc
+2.select w.wname,sum(s.salesAmount) as 销售量 from ware w,SalesInfo swhere w.wid=s.wid group by wname order by 销售量 desc
+--统计每类商品的销售量，显示商品类别及销售量
+select t.cname,sum(s.SalesAmount) as 销售量 from  Category t, ware w,SalesInfo swhere t.Cid=w.Cid and w.Wid=s.Wid  group by Cname
+--统计每种商品到目前的盈利总额
+select Wname,sum((SalesPrice-PurchasePrice)*SalesAmount) as 盈利总额from Ware w,SalesInfo swhere w.Wid=s.Wid group by Wname
+
+
+
+
+
+
+-- 收银员2号
+update ware set Amount = Amount-5 where wid ='10012'insert into SalesInfo values (10012,'2017-09-30',5,1002)
+--按销售总额对收银员排序
+select e.Ename,sum((SalesPrice-PurchasePrice)*SalesAmount) as 销售总额from Employee e,SalesInfo s,ware w where e.eid=s.eid and w.wid=s.widgroup by e.ename order by 销售总额 desc
+--查询商品销量在前五的商品名称及销量
+ select top 5 w.wname,sum(s.SalesAmount) 销量 from Ware w,SalesInfo s where w.wid=s.widgroup by w.wname order by 销量 desc
+--查询2010年商品销量在前五的商品名称及销量
+select top 5 w.wname,sum(s.SalesAmount) 销量from Ware w,SalesInfo s where w.wid=s.widand s.SalesDate between '2017-12-15'and '2017-12-20'group by w.wname order by 销量 desc
+--统计每个员工2017年名称及销量 
+select e.Ename,sum(s.salesAmount) 销量from Employee e,SalesInfo s where e.eid=s.eid ands.SalesDate between '2017-12-12'and'2017-12-15'group by e.Ename order by 销量 desc
+--单个利润
+select s.SalesDate,sum((w.SalesPrice-w.PurchasePrice)*s.SalesAmount) 总利润from SalesInfo s,Ware wwhere s.wid=w.wid and s.SalesDatebetween'2017-12-01'and'2017-12-30'group by s.SalesDate
+--统计2017年的总利润
+select sum((w.SalesPrice-w.PurchasePrice)*s.SalesAmount) 总利润from Ware w,SalesInfo s where w.Wid=s.wid and s.SalesDatebetween'2017-12-01'and'2017-12-30'
+
+
+
+
+
+--查询显示每件商品的编号、名称以及利润，按利润从高到低进行排序
+--SalesPrice（售价）-PurchasePrice（进价）=利润 
+select Wid as 编号,Wname as 名字,SalesPrice-PurchasePrice as 利润 from Wareorder by SalesPrice-PurchasePrice desc
+--统计每件商品的销售量，显示商品名称及销售量，按销售量从高到低排序
+select Wname,sum(SalesAmount) as 销售量 from Ware w,SalesInfo swhere w.Wid=s.Wid group by Wname order by sum(SalesAmount) desc
+select w.wname,sum(s.salesAmount) as 销售量 from ware w,SalesInfo swhere w.wid=s.wid group by wname order by 销售量 desc
+--统计每类商品的销售量，显示商品类别及销售量
+select t.cname,sum(s.SalesAmount) as 销售量 from  Category t, ware w,SalesInfo swhere t.Cid=w.Cid and w.Wid=s.Wid  group by Cname
+--统计每种商品到目前的盈利总额
+select Wname,sum((SalesPrice-PurchasePrice)*SalesAmount) as 盈利总额from Ware w,SalesInfo swhere w.Wid=s.Wid group by Wname
+-- 收银员2号
+update ware set Amount = Amount-5 where wid ='10012'insert into SalesInfo values (10012,'2017-09-30',5,1002)
+--按销售总额对收银员排序
+select e.Ename,sum((SalesPrice-PurchasePrice)*SalesAmount) as 销售总额from  Employee e,SalesInfo s,ware w where e.eid=s.eid and w.wid=s.widgroup by e.ename order by 销售总额 desc
+--查询商品销量在前五的商品名称及销量 
+select top 5 w.wname,sum(s.SalesAmount) 销量 from Ware w,SalesInfo s where w.wid=s.widgroup by w.wname order by  销量 desc
+--查询2010年商品销量在前五的商品名称及销量 
+select top 5 w.wname,sum(s.SalesAmount) 销量from  Ware w,SalesInfo s where w.wid=s.widand s.SalesDate between '2017-12-15'and '2017-12-20'group by w.wname order by  销量 desc
+--统计每个员工2017年名称及销量 
+select e.Ename,sum(s.salesAmount) 销量from Employee e,SalesInfo s where e.eid=s.eid ands.SalesDate between '2017-12-12'and'2017-12-15'group by e.Ename order by 销量 desc
+--单个利润
+select s.SalesDate,sum((w.SalesPrice-w.PurchasePrice)*s.SalesAmount) 总利润from SalesInfo s,Ware wwhere s.wid=w.wid and s.SalesDatebetween'2017-12-01'and'2017-12-30'group by s.SalesDate
+--统计2017年的总利润
+select sum((w.SalesPrice-w.PurchasePrice)*s.SalesAmount) 总利润from Ware w,SalesInfo s where w.Wid=s.wid and  s.SalesDatebetween'2017-12-01'and'2017-12-30'
