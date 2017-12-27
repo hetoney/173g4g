@@ -1,0 +1,128 @@
+--新建数据库
+create database supermarket
+on(
+--指定数据库名称
+name='Supermarket',
+filename='C:\Supermarket.mdf',
+--指定数据库初始容量
+size =3MB,
+--指定数据库最大容量
+maxsize =50MB,
+--指定数据库自动增长容量
+filegrowth=1MB
+)
+--新建数据库日志
+log on(
+--指定数据库名称
+name='Supermarket_log',
+filename='C:\Supermarket_log.mdf',
+--指定数据库初始容量
+size =3MB,
+--指定数据库最大容量
+maxsize =50MB,
+--指定数据库自动增长容量
+filegrowth=10%
+)
+--删除数据库
+drop database supermarket
+
+
+
+
+
+
+
+--新建表
+create table Category
+(
+Cid int primary key identity(1,1),
+Cname nvarchar(20) not null unique,
+Description nvarchar(20)
+)
+--新建表
+create table Ware
+(
+Wid int primary key identity(1,1),
+Wname nvarchar(20) not null,
+Cid int not null foreign key references Category(Cid),
+Purchaseprice int check(Purchaseprice>0),
+Salesprice int check(Salesprice>0),
+Amount int check(Amount>0)
+)
+--新建表
+create table Employee
+(
+Eid int primary key identity(1001,1),
+Ename nvarchar(20) not null,
+Cid int not null foreign key references Category(Cid),
+Epassword bigint check(Epassword>=100000),
+Remark nvarchar(20)
+)
+--新建表
+create table Salesinfo
+(
+Sid int primary key identity(1,1),
+Wid int not null foreign key references Ware(Wid),
+Eid int not null foreign key references Category(Cid),
+Salesdate datetime not null,
+Salesamount smallint check(Salesamount>=0)
+)
+--删除数据表
+drop database Category
+drop database Ware
+drop database Employee
+drop database Salesinfo
+--查询数据
+select * from  Category
+select * from  Ware
+select * from  Employee
+select * from  Salesinfo
+
+--添加数据
+insert into Category(Cname,Description)values('食品类','吃不够！')
+insert into Category(Cname,Description)values('家电类','售后无服务！')
+insert into Category(Cname,Description)values('家具类','售后不送货！')
+
+insert into Ware(Wname,Cid,Purchaseprice,Salesprice,Amount)Values('奥利奥饼干',1,5,15,300)
+insert into Ware(Wname,Cid,Purchaseprice,Salesprice,Amount)Values('米多奇米饼',2,4,20,300)
+insert into Ware(Wname,Cid,Purchaseprice,Salesprice,Amount)Values('德芙巧克力',3,20,60,300)
+insert into Ware(Wname,Cid,Purchaseprice,Salesprice,Amount)Values('格力抽油烟机',1,1200,5000,300)
+insert into Ware(Wname,Cid,Purchaseprice,Salesprice,Amount)Values('格力空调',2,2500,7600,300)
+insert into Ware(Wname,Cid,Purchaseprice,Salesprice,Amount)Values('格力太阳能',3,2400,8000,300)
+insert into Ware(Wname,Cid,Purchaseprice,Salesprice,Amount)Values('席梦思软床',1,1200,2800,300)
+insert into Ware(Wname,Cid,Purchaseprice,Salesprice,Amount)Values('真皮沙发',2,2000,6500,300)
+insert into Ware(Wname,Cid,Purchaseprice,Salesprice,Amount)Values('大型橱柜',3,700,1500,300)
+
+insert into Employee(Cid,Ename,Epassword,Remark)Values(1,'于华涛',123456,'员工')
+insert into Employee(Cid,Ename,Epassword,Remark)Values(2,'刘梦祥',123456,'店长')
+insert into Employee(Cid,Ename,Epassword,Remark)Values(3,'康云飞',123456,'副店长')
+insert into Employee(Cid,Ename,Epassword,Remark)Values(1,'李永奇',123456,'员工')
+insert into Employee(Cid,Ename,Epassword,Remark)Values(2,'李永康',123456,'员工')
+insert into Employee(Cid,Ename,Epassword,Remark)Values(3,'刘涛',123456,'员工')
+insert into Employee(Cid,Ename,Epassword,Remark)Values(1,'刘虎',123456,'员工')
+insert into Employee(Cid,Ename,Epassword,Remark)Values(1,'牛永亮',123456,'员工')
+insert into Employee(Cid,Ename,Epassword,Remark)Values(1,'贝勒爷',123456,'总店长')
+
+
+insert into Salesinfo(Wid,Eid,Salesdate,Salesamount)Values(1,1,2017-11-25,50)
+insert into Salesinfo(Wid,Eid,Salesdate,Salesamount)Values(2,2,2017-11-15,50)
+insert into Salesinfo(Wid,Eid,Salesdate,Salesamount)Values(3,3,2017-10-25,50)
+insert into Salesinfo(Wid,Eid,Salesdate,Salesamount)Values(4,1,2017-9-15,50)
+insert into Salesinfo(Wid,Eid,Salesdate,Salesamount)Values(5,2,2017-10-15,50)
+insert into Salesinfo(Wid,Eid,Salesdate,Salesamount)Values(6,3,2017-11-10,50)
+insert into Salesinfo(Wid,Eid,Salesdate,Salesamount)Values(7,1,2017-8-25,50)
+insert into Salesinfo(Wid,Eid,Salesdate,Salesamount)Values(8,2,2017-11-25,50)
+insert into Salesinfo(Wid,Eid,Salesdate,Salesamount)Values(9,3,2017-10-13,50)
+
+--内链接
+select Wname 商品名称,Amount 出售个数,Salesprice-Purchaseprice 利润 from Ware
+--排序降序
+select Wid 商品编号,Wname 商品名称,Cid 库号,Purchaseprice 进价,Salesprice 售价,Amount 库存 from Ware order by Salesprice desc
+--盈利总和
+select w.Wid 商品编号,Wname 商品名称,Salesamount 出售个数,((Salesprice-Purchaseprice)*Salesamount) AS 总盈利 
+from Ware w
+inner join Salesinfo s on s.Wid=w.Wid order by 总盈利  desc
+--修改指定数据
+update Salesinfo set Wid=2 where Salesdate=2017-11-15
+--修改所有数据
+update Salesinfo set Salesamount=10

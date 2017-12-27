@@ -1,0 +1,31 @@
+--新建数据库
+create database SuperMarket
+on
+(
+--新建数据库名称
+name='SuperMaket',
+--指定路径及文件后缀
+filename='C:\SuperMaket.mdf',
+--指定数据库的初始容量
+size=3MB,
+--指定数据库最大容量
+maxsize=50MB,
+--指定增长速率
+filegrowth=1MB
+)
+log
+on
+(
+--指定数据库名称
+name='SuperMaket.ldf',
+--指定路径及文件后缀
+filename='C:\SuperMaket_log.ldf',
+--指定数据库的初始容量
+size=3MB,
+--指定数据库最大容量
+maxsize=50MB,
+--指定增长速率
+filegrowth=10%
+)
+--删除数据库
+drop database SuperMaket 
