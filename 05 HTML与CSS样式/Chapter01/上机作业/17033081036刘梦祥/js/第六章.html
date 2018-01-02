@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>第六章</title>
+	</head>
+	<style>
+		a:link
+		{color: red;
+		text-decoration: none;}
+	</style>
+	<body background="../img/页面.jpg" >
+		<h1 align="center"><font color="blue" face="宋体" size="6">第六章：CSS样式定义与应用</font></h1>
+		<pre><h1>
+<font color=firebrick size="7">1.CSS样式表的基本语法</font>
+<font color="red" size="6">ruleselectr {propertv：value;property:value...}</font>
+<font color="red" size="6">规则选择器    属性   值</font>
+  大家都知道，HTML中标签有很多，我们只有对所选中的标签才可以运用
+样式，前面的红色字"<font color="red" size="6">ruleselector</font>"代表CSS规则选择器或叫样式
+选择器，即CSS要作用的标签，其中跟一对"<font color="red" size="6">{}</font>",在"<font color="red" size="6">{}</font>"中间是样式
+规则，所有的样式规则组成样式规则列表，每对样式规则中间用"<font color="red" size="6">;</font>"隔开，
+ 每对样式规则是以"样式属性：样式值"的形式定义。
+<font color=firebrick size="7">2.CSS样式选择器的分类</font>
+CSS样式选择器分为：<font color="blue">基本选择器和复合选择器。</font>
+基本选择器又分为：<font color="blue">标记选择器、类别选择器、ID选择器。</font>
+复合选择器又分为：<font color="blue">并集选择器、交集选择器和后代选择器。</font>
+<font color=firebrick size="7">3.基本选择器</font>
+ <font color=chocolate size="6">3.1标记选择器</font>
+   标记选择器即通过使用HTML标签来定义选择器，其基本语法如下：
+   <font color="red" size="6">标签名称{样式属性名称1：属性值1；样式属性名称2：...}</font>
+   请看下面的这个案例：
+   < style>
+   	p{
+   		color：red；
+   		font-family："黑体"；
+   		font-size：18px；
+   	}
+   < /style>
+   < /head>
+   < body>
+   < center>
+   	< p>静夜思< /p>
+   	< p>床前明月光，< /p>
+   	< p>疑是地上霜。< /p>
+   	< p>举头望明月，< /p>
+   	< p>低头思故乡。< /p>
+   	< /center>	
+ 在浏览器中的运行效果如下：
+<a href="第六章演示1.html">进入>>></a>
+ <font color=chocolate size="6">3.2类别选择器</font>
+  在上面的案例中，我们可以看到所有的< p>标签都是一种样式效果，
+现在如果要将上例中的奇数行和偶数行设置不同的样式效果，该怎么办
+呢？CSS样式选择器给我们提供了一种机制，可以针对需要为具有相同
+属性的标签设置样式，这种方式定义的样式叫类别选择器，其基本语法
+如下：
+<font color="red" size="6">.{属性名称1：属性值1；属性名称2：属性值2；...}</font>
+如下案例：
+在前面的案例的< style>< /style>标签之间，加入下面的样式代码：
+.t1
+{
+	font：25px 楷体-GB2312；
+	color：blue；
+}
+.t2
+{
+	font-size：30px；
+	color：green；
+}
+< body>
+< center>
+   	< p>静夜思< /p>
+   	< p class="t1">床前明月光，< /p>
+   	< p class="t2">疑是地上霜。< /p>
+   	< p class="t1">举头望明月，< /p>
+   	< p class="t2">低头思故乡。< /p>
+   	< /center>
+最终在浏览器中看到的效果如下：
+<a href="第六章演示2.html">进入>>></a>
+ <font color=chocolate size="6">3.3ID选择器</font>
+  前面学过的两种基本选择器可以针对某个标签进行多次使用，也可
+以说是一次定义到处使用，其针对性不是很强，比如要在某个页面中
+只针对某个标签定义样式，我们可以使用ID选择器。ID选择器的基本
+语法如下：<font color="red" size="6">#选择器名称{样式
+规格表}；</font>请看如下案例：还是上面的那个案例，我们现在
+要把标题的样式作一修改，我们在< style>< /style>标签之间加
+入
+#title{font-size:35px;text-decoration:underline;
+color:pink}
+将< p>静夜思< /p>更改为：< p id="title">静夜思< /p>
+  上述样式代码的含义是将ID为"title"的标签设置其字体大小为
+"35px"，并设置其下划线，字体颜色为"pink"即为粉红色，在浏览
+器中运行的效果如图：
+<a href="第六章演示3.html">进入>>></a>
+<font color=firebrick size="7">4.CSS样式表中的常用样式属性</font>
+ <font color="darkblue">1.文本样式属性：</font>
+  <font color="red">font-size</font>:字体大小；
+  <font color="red">font-family</font>：字体名称；
+  <font color="red">font-style</font>：字体样式；
+  <font color="red">color</font>：字体文本颜色；
+  <font color="red">text-align</font>：字体在标签容器中的水平对齐方式；
+ <font color="darkblue">2.超链接样式属性：</font>
+  <font color="red">a:link</font> 正常状态下的链接样式。
+  <font color="red">a:hover</font> 鼠标划入时的链接样式。
+  <font color="red">a:active</font> 按下链接但不松开时的样式，即激活状态。
+  <font color="red">a:visited</font> 访问过的链接样式。
+ <font color="red"> text-decoration</font> 是否为字体设置下划线，可取值；
+ <font color="red"> none</font> 没有下划线。
+  <font color="red">underline</font> 设置下划线效果。
+  <font color="red">overline</font> 上划线效果。
+		</h1>
+		<a href="目录.html"><font size="6">返回目录>>></font></a>
+	<font  size="3"><h4 align="right">版权所有人：<a href="刘某人.html">刘某人</a></h4></font>	
+		</pre>
+	</body>
+</html>
+
+
+
+
+
+
+
+
