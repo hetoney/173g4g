@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/222.css"/>
+		
+	<body>
+		<div class="top_menu">
+			<ul>
+				<li class="pic1"></li>
+				<li class="text">
+					<a herf="#">购物车</a>
+				</li>
+				<li class="pic2"></li>
+				<li class="text">
+					<a herf ="#">帮助中心</a>
+				</li>
+				<li class="pic3"></li>
+				<li class="text">
+					<a herf="#">加入收藏</a>
+				</li>
+				<li class="pic4"></li>
+				<li class="text">
+					<a herf="#">设为首页</a>	
+				</li>
+				<li class="btn">
+					<a herf="#">登录</a>
+				</li>
+				<li class="btn">
+					<a herf="#">注册</a>
+				</li>
+				</ul>
+		</div>
+	</body>
+</html>
+
