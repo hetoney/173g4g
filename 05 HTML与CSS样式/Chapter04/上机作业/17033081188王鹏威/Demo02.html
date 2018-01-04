@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>ID标签</title>
+		<style type="text/css">
+			#header{
+			  width: 100%;
+			  height: 100px;
+			  background: aqua;
+			}
+			#main{
+				width: 100%;
+				height: 400px;
+				background:gold;
+			}
+			#footer{
+				width: 100%;
+				height: 100px;
+				background: aqua;
+			}
+			#container{
+				width: 800px;
+				margin:auto;
+			}
+			.log{
+				background:gold;
+				width: 50%;height: 100%;
+			}
+			.log_right{
+				background: #33FF33;
+				width: 50%;height: 100%;
+			}
+			.log,.log_right{float:left}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+		<div id="header">顶部(header)</div>
+		<div id="main">
+			<div class="log">登陆(log)</div>
+			<div class="log_right">登陆说明(log_right)</div>
+			</div>
+		<div id="footer">底部(footer)</div>
+	</div>
+	</body>
+</html>
