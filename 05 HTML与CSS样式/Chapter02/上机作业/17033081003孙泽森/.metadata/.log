@@ -1,0 +1,63 @@
+!SESSION 2018-02-02 19:22:38.909 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Framework arguments:  -login -application com.aptana.commandline.launcher.LauncherApplication C:\Users\Administrator\Desktop\孙泽森\第三节\17033081003孙泽森\demo01.html
+Command-line arguments:  -os win32 -ws win32 -arch x86 -login -data   -application com.aptana.commandline.launcher.LauncherApplication C:\Users\Administrator\Desktop\孙泽森\第三节\17033081003孙泽森\demo01.html
+
+!ENTRY com.aptana.core 1 0 2018-02-02 19:22:39.372
+!MESSAGE (Build null) [INFO]  ide start check begin
+
+!ENTRY com.aptana.rcp 4 0 2018-02-02 19:22:39.378
+!MESSAGE (Build null) [ERROR]  getRawLocationURI: file:/C:/Users/Administrator/Desktop/孙泽森/第三节/17033081003孙泽森
+
+!ENTRY com.aptana.rcp 4 0 2018-02-02 19:22:39.384
+!MESSAGE (Build null) [ERROR]  checkInstanceLocation
+
+!ENTRY com.pandora.core.utils 4 0 2018-02-02 19:22:39.392
+!MESSAGE (Build null) [ERROR]  remote-debugging-port == 50324
+
+!ENTRY com.aptana.rcp 4 0 2018-02-02 19:22:39.404
+!MESSAGE (Build null) [ERROR]  init CEF
+
+!ENTRY org.eclipse.ui 2 0 2018-02-02 19:22:39.487
+!MESSAGE Warnings while parsing the key bindings from the 'org.eclipse.ui.commands' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2018-02-02 19:22:39.487
+!MESSAGE Could not parse key sequence: plug-in='com.pandora.ui', id='org.eclipse.ui.edit.text.contentAssist.proposals', keySequence='Ctrl+Sapce'
+
+!ENTRY com.aptana.rcp 4 0 2018-02-02 19:22:39.642
+!MESSAGE (Build null) [ERROR]  ********HBuilder正常启动：preStartup********
+
+!ENTRY org.eclipse.ui 4 4 2018-02-02 19:22:39.839
+!MESSAGE Unable to create menu item "org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction", command "org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction" not defined
+
+!ENTRY com.aptana.scripting 4 0 2018-02-02 19:22:41.963
+!MESSAGE (Build null) [ERROR]  An error occurred while parsing scope 'Build–in constant' : Cannot recover from the syntax error
+
+!ENTRY com.aptana.scripting 4 0 2018-02-02 19:22:41.965
+!MESSAGE (Build null) [ERROR]  An error occurred while parsing scope 'library class/type' : Cannot recover from the syntax error
+
+!ENTRY com.aptana.rcp 4 0 2018-02-02 19:22:42.397
+!MESSAGE (Build null) [ERROR]  ---------------------start check----------------------
+
+!ENTRY com.aptana.rcp 4 0 2018-02-02 19:22:42.399
+!MESSAGE check mode
+
+!ENTRY com.aptana.commandline.launcher 4 0 2018-02-02 19:22:49.271
+!MESSAGE Stream closed
+!STACK 0
+java.io.IOException: Stream closed
+	at java.io.BufferedReader.ensureOpen(Unknown Source)
+	at java.io.BufferedReader.readLine(Unknown Source)
+	at java.io.BufferedReader.readLine(Unknown Source)
+	at com.aptana.commandline.launcher.server.LauncherServer$CommandLineArgsServer.run(LauncherServer.java:135)
+
+!ENTRY com.aptana.rcp 4 0 2018-02-02 19:22:58.256
+!MESSAGE (Build null) [ERROR]  null
+!STACK 0
+java.lang.Exception
+	at com.aptana.rcp.SystemUtils.exit(SystemUtils.java:9)
+	at com.aptana.rcp.ReadyFileUtils$CheckFileTask.run(ReadyFileUtils.java:112)
+	at java.util.TimerThread.mainLoop(Unknown Source)
+	at java.util.TimerThread.run(Unknown Source)
