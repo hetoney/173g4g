@@ -1,0 +1,70 @@
+body {
+	padding: 0px;
+	margin: 0px;
+	font: 12px Tahoma;
+}
+
+dl,
+ul,
+ol,
+h1 {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+a {
+	color: #333333;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #ff7300;
+}
+
+a img {
+	border: 0px;
+}
+
+#container {
+	width: 980px;
+	margin: 0 auto;
+	float: none;
+}
+
+
+
+.cat,
+.content,
+.sidebar {
+	float: left;
+	height: 100%;
+}
+
+.cat {
+	height: 603px;
+	width: 189px;
+	padding: 40px 0px 0px 15px;
+	background: url(../img/bg.gif)no-repeat;
+}
+
+.cat h1 {
+	font: bold 14px 宋体;
+	color: #ff7300;
+	line-height: 27px;
+}
+
+.cat li {
+	font: 12px/24px 宋体;
+	color: #636362;
+	width: 60px;
+	float: left;
+}
+
+
+
+.content {
+	width: 60%;
+	
+}
+
