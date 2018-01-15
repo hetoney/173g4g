@@ -1,0 +1,15 @@
+a:link
+{
+color: red;
+text-decoration: none;
+}
+a:link.t1
+{
+color: aliceblue;
+text-decoration: none;
+}
+a:hover
+{
+color: blue;
+
+}

@@ -1,0 +1,78 @@
+.top_menu
+			{
+			/*向右浮动
+			 */
+				float: right;
+			}
+			.top_menu ul
+			{
+			/*去掉标签
+			 */
+				list-style: none;
+			}
+			.top_menu li
+			{
+			/*向左浮动
+			 */
+				float: left;
+			}
+			.pic1
+			{
+				width: 28px;
+				height: 26px;
+				background: url(../img/icon.gif) 0px -3px ;
+			}
+			.pic2
+			{
+				width: 28px;
+				height: 26px;
+				background: url(../img/icon.gif) no-repeat -28px -3px;
+			}
+			.pic3
+			{
+				width: 28px;
+				height: 26px;
+				background: url(../img/icon.gif) no-repeat -84px -2px;
+			}
+			.pic4
+			{
+				width: 28px;
+				height: 26px;
+				background: url(../img/icon.gif) no-repeat -112px -3px;
+			}
+			.text
+			{
+				padding: 0px 5px;
+				text-align: center;
+			}
+			.btn
+			{
+				padding: 0px 5px;
+				text-align: center;
+				width: 40px;
+				height: 26px;
+				background: url(../img/icon.gif) no-repeat 0px -28px;
+			}
+			.top_menu ul li a a
+			{
+				font: 12px/26px 宋体;
+			}
+			.top_menu ul li a:link
+			{
+				color: #333333;
+				text-decoration: none;
+			}
+			.top_menu ul li a:visited
+			{
+				color: #333333;
+				text-decoration: none;
+			}
+			.top_menu ul li a:active
+			{
+				color: #333333;
+				text-decoration: none;
+			}
+			.top_menu ul li a:hover
+			{
+				color: #ff7300;
+			}

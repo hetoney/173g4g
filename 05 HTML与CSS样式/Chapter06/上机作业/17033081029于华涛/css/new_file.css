@@ -1,0 +1,26 @@
+#right{
+width: 233px;
+height: 294px;
+padding-top: 32px;
+background: url(../img/bg.gif) no-repeat;
+}
+#right dl dt{
+float: left;
+width: 90px;
+padding: 2px 0px;
+text-align: center;
+}
+#right dl dd img{
+border: 1px solid #9ea0a2;
+width: 60px;
+height: 47px;
+vertical-align: middle;
+}
+#right dl dd a{
+font: 12px/47px 宋体;
+color: #333;
+text-decoration: none;
+}
+#right dl dd a:hover{
+color: #ff7777;
+}
