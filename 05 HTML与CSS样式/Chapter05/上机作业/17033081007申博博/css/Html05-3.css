@@ -1,0 +1,36 @@
+#right{
+/*图的大小*/
+width: 250px;
+height: 270px;
+/*内边距  上*/
+padding-top: 32px;
+/*图的链接*/
+background: url(../img/bd.gif)no-repeat;
+}
+/*dt行的格式*/
+#right dl  dt {
+    /*浮动*/
+    float: left;
+    /*字符行间距*/
+    margin: 0px;
+    /*字符居中*/
+    text-align: center;
+    
+    width: 90px;
+    
+    padding: 2px 0px ;
+}
+/*图片格式*/
+#right dl dt img{
+     border: 1px solid #9ea0a2;
+     width: 60px;
+     height: 47px;
+     vertical-align: middle;
+}
+#right dl dd a{
+    font: 12px/47px 宋体;
+    color: #333;
+    text-decoration: none;
+}
+#right dl dd a:hover{
+}

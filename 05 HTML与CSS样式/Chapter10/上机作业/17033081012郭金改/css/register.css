@@ -1,0 +1,27 @@
+
+.b{font-weight:bold ;}
+.c390{color: #390;}
+.c999{color: #999;}
+.cf60{color: #f60;}
+.c06c,li a:link ,#header a{color: #06c;}
+.a_c{text-align: center;}
+.b0{border:0px ; height: auto ;width: auto;}
+h3{color: #333; font: bold  14px/14px 宋体; text-align: center; height: 14px;
+margin: 14px 0px;}
+#container{width: 1004px; margin: 0px auto;background: url(../img/register_bg.gif) no-repeat;font: normal 12px/37px 宋体; color: #000;}
+#header{height: 146px;}
+#main{width: 710px;height: 600px; margin: 0px auto ;padding: 0px 96px;}
+.logo{padding-left: 37px; height: 80px;}
+.backhome{margin: 36px 34px 0px 0px ;text-align: 14px;}
+p .txt{border: 1px #ffdb8c solid;background: #fffbe7; color: #000; padding: 6px;
+line-height: 32px ; font-size:14px ; width: 696px; height: 58px;}
+form{width: 556px ;margin: 0 auto; height: 400px;}
+form ul{height: 37px; line-height: 37px;}
+form p{padding: 0px 27% 15px 20%; width: 53%; line-height: 16px;}
+.other{background: #2a9; color: #eee; font: bold 12px/20px 宋体; height: 20px;border: 2px #ccc solid;
+width: 60px;  }
+.submit{font: bold 14px 宋体; color: #fff; background: url(../img/submit_bg.gif) no-repeat;width: 163px;
+height: 34px; margin:  15px 0px 35px 0px ; }
+label,form li{height: 20px;line-height: 20px; float: left;}
+label{_margin-top:2px; width:18%; padding-right: 2%; text-align: right;}
+form li{width: 79%;}
