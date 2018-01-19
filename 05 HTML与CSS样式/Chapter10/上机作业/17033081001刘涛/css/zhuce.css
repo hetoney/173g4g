@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* CSS Document */
+
+a{ color:#666; text-decoration:none;}
+a:hover{ color:#F00;}
+ul,ol,p,dl,dt,dd,form{ margin:0px; padding:0px;}
+li{ list-style:none;}
+#zhuce{ width:1004px; height:770px; border:1px solid #000; background:url(../img/conti/register_bg.gif) no-repeat; margin:0px auto; font-size:12px;}
+  #shangtu1{ background:url(../img/index/logo.gif) no-repeat; width:170px; height:65px; margin-left:40px;}
+    .youkao{ float:right; margin:62px 70px 0px 0px;}
+	.huse{ color:#999;}
+	.p2{ font-size:14px; text-align:center; margin-top:95px;}
+  #shang2{ width:700px; height:70px; border:1px solid #CCC; background:#eaf1fb; margin:10px auto; font-size:14px;}	
+    #shang2 li{ height:30px; line-height:30px;}
+	#shang2 ul{ margin-top:5px; margin-left:4px;}
+	.p3{ margin-left:150px; color:#999;}
+	.u2{ width:1000px; height:425px;  margin-top:25px;}
+	 .u2 li{ float:left; margin-left:10px; height:80px;}
+	 .u2 li input{ border:1px solid #CCC; margin-bottom:10px;}
+	 .u2 .h60px{ height:65px;}
+	 .u2 .h50px{ height:40px;}
+	.u2 li .border1{ border:0px;}
+	   .shangju{ margin-top:10px;}
+	 .w330px{ width:320px; text-align:right;}
+	 .w650px{ width:640px; padding-left:5px;}
+  #beijing3{ background:url(../img/conti/submit_bg.gif) no-repeat; width:163px; height:34px;margin-top:23px; margin-left:50px; color:#FFF; font-size:14px; border:0px;}	
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

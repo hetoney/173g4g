@@ -1,0 +1,62 @@
+
+
+
+#judian{ width:960px; height:2050px; border:1px solid #000; margin:0px auto; font-size:12px;}
+#kuangjia{ width:940px; height:2050px; margin:0px auto;}
+
+#contin{ width:940px; height:1675px;}
+  #contin .shang1{ width:940px; height:360px; background:url(../img/conti/market.jpg) no-repeat;}
+  #contin .u1{ width:940px; height:30px; background:url(../img/index/footer_bg.gif) repeat-x; border:1px solid #CCC;}
+  #contin .u1 li{ float:left; height:20px; line-height:20px; margin-top:10px; width:60px; text-align:center; margin-left:30px;}
+  #contin .w730px{ width:730px; float:left;}
+  #contin .beijing{ background:#FFF; border:1px solid #CCC;}
+  #contin .beijing1{ background:url(../img/conti/createspot.gif) no-repeat; width:190px; height:33px; float:left; margin:0px 0px 0px 10px;}
+  
+  #left{ width:125px; height:1200px; float:left; padding-top:8px;}
+   #left .zuobian{margin:10px 15px;}
+      #left .zuobian li{ height:18px; line-height:18px;}
+    .huse{ color:#CCC;}
+	
+  #menu{ width:605px; height:1200px; float:left; padding-top:8px;}	
+    #menu ul{ border-bottom:1px dashed #CCC; height:20px; line-height:20px; width:605px;}
+	  #menu ul li{ float:left;}
+	 #menu dl{ width:605px; height:105px; border-bottom:1px dashed #CCC;} 
+	   #menu dt{ float:left; width:68px; margin:22px 30px 0px 50px;}
+	   #menu dt img{ border:1px solid #CCC;}
+	   #menu dd{ float:left; height:65px;}
+	   #menu .font1{ font-size:20px; font-weight:bold;}
+	   #menu .d1{ height:100px; line-height:100px;}
+	   #menu .w300px{ width:350px; margin-top:22px;}
+	   #menu .u8{ height:105px;}
+	   #menu .u8 li{ border:1px solid #999; width:70px; height:25px; line-height:25px; text-align:center; background:#CCC; margin-left:3px; margin-top:25px;}
+	   #menu .u8 .beijing2{ background:#FFF; margin-left:50px;}
+  #right{ width:190px; height:1247px; float:left; margin-left:10px; margin-top:8px; color:#999;} 
+    #right .right_1{ width:190px; height:282px; background:#CCC;}
+	  #right .shangtu1{width:185px; height:45px; line-height:45px; margin:0px auto;background:url(../img/index/bg.gif) no-repeat -102px -112px;font-size:14px; color:#900;}
+	  #right .shangtu1 p{ margin:0px; margin-left:10px;}
+	  #right ul{ width:180px; height:54px; margin:0px auto; background:#FFF; margin-bottom:5px;}
+	  #right li{ margin-left:3px; padding-top:3px;}
+	#right .right_2{ width:190px; height:947px; background:#CCC; margin-top:10px;}
+	  #right .right_2 .h48px{ height:45px;}
+	
+#foot{ width:940px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

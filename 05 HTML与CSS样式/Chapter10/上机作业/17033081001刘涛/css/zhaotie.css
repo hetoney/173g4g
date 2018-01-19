@@ -1,0 +1,63 @@
+
+
+#zhaotie{width:960px; height:2050px; border:1px solid #000; margin:0px auto; font-size:12px;}
+#kuangjia{ width:940px; height:2050px; margin:0px auto;}
+#contin{ width:940px; height:1605px;}
+   #left{ width:215px; height:1600px; float:left;}
+     .left_1{ margin-top:10px;width:193px; height:35px;}
+	 .left_2{ width:200px; height:755px; background:#CCC; padding-top:10px;}
+	    .left_2 .shangtu1{width:195px; height:45px; line-height:45px; margin:0px auto;background:url(../img/index/bg.gif) no-repeat -102px -112px;font-size:14px; color:#900;}
+		 .left_2 .shangtu1 p{ margin:0px; margin-left:10px;}
+	 #left .u1{ padding-left:10px; width:179px; height:690px; background:#FFF; margin:0px auto; padding-top:10px;}	 
+	 #left .u2{ margin:8px 0px; margin-left:25px;}
+	    #left .u2 li{ height:23px; line-height:23px;}
+  #menu{ width:530px; height:1600px; float:left;}	
+    #menu .u5{ width:530px; height:25px; border-bottom:1px solid #CCC;}
+	#menu .u5 p{ width:130px; height:25px; text-align:center; border:1px solid #CCC; margin-top:15px; background:#FFF; font-size:14px; margin-left:60px; border-bottom:0px; line-height:25px;}
+	   #menu dl{ width:530px; height:90px; border-bottom:1px dashed #CCC;} 
+	    #menu dt{ float:left; width:55px; height:70px; margin-top:20px;}
+	   #menu dt img{ border:1px solid #CCC;}
+	   #menu dd{ height:25px; line-height:25px;}
+	   #menu .shangju2{ margin-top:5px;}
+	   #menu .hose{ color:#F00;}
+	   #menu .youkao{ float:right;}
+	
+  #right{ width:162px; height:1600px; float:right;}
+     #right img{ border:1px solid #CCC; margin:3px 0px;}
+#foot{ width:940px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

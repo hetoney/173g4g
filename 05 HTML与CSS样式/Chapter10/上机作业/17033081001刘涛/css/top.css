@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+
+a{ text-decoration:none;}
+body,ul,ol,dl,dt,dd,form{ margin:0px; padding:0px;}
+li{ list-style:none;}
+#footer{ width:940px; height:80px; font-size:12px; background:url(../img/index/footer_bg.gif) repeat-x; margin:0px auto;
+        text-align:center; padding-top:3px;}
+	#footer a{ text-decoration:none; margin-left:12px; color:#000;}
+	#footer a:hover{ color:#F00;}
+	#footer .ge{ color:#999; margin-top:25px; margin-left:15px;}
+
+#top{ width:940px; height:215px; font-size:12px; margin:0px auto;}
+   #top .tu1{ background:url(../img/index/logo.gif) no-repeat; width:205px; height:65px; float:left; margin-top:10px;}
+   #top .tu2{ background:url(../img/conti/banner.jpg) no-repeat; width:530px; height:81px; float:left; margin-top:10px;}
+   #top .tu3{ width:200px; height:80px; border:1px solid #CCC; float:left; margin-top:10px;}
+      .tu3 p{ height:60px; line-height:20px; margin-left:10px;}
+   #weibu{ background:url(../img/index/bg.gif) no-repeat; width:940px; height:106px; float:left; margin-top:15px;}
+     #weibu .u1{ width:940px; height:40px;}
+     #weibu li{ float:left; text-align:center; height:35px; line-height:35px; width:75px;}
+	  #weibu .w1150px{ width:215px;}
+	  #weibu .cuti{ font-size:14px; font-weight:bold;}
+	  #weibu .beijing{ background:url(../img/index/bg.gif) no-repeat -11px -112px; width:75px; height:37px;}
+	    #weibu .beijing a{ color:#000;}
+	  #weibu a{ color:#FFF;width:75px; height:37px;}
+	  #weibu a:hover{ color:#000;}
+	 #weibu .u2{ width:800px; height:40px; margin:10px 0px 0px 20px;} 
+	   #weibu .u2 .input1{ width:300px; height:23px; border:1px solid #CCC; line-height:23px;}
+	  #weibu .u2 li{ float:left; width:300px; text-align:left;}
