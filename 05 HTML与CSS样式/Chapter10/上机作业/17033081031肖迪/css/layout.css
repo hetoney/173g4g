@@ -1,0 +1,48 @@
+#se{background: lightcyan;
+}
+
+#header {width: 1000px;height: 70px;padding-left: 300px;padding-top: 38px;}
+#header h1{width: 300px;}
+#header ul{background: #969696;margin-bottom: 8px;}
+#header ul li{background: #fff;color: #000;padding: 0px 16px;height: 14px;float: left;font: bold 14px/16px 宋体;margin-right:2px;}
+#header a{color: #aaa;}
+#header form{padding: 0px 0px 0px 16px;}
+.searchbox{width: 352px;height: 27px;line-height: 27px;padding:0 0 0 32px; border:5px #1fadff solid;background:url('..img/icon.gif') no-repeat;}
+.submit{width: 76px;height: 37px;line-height: 37px;font: bold 16px 宋体;background: #3eb7fe;color: #fff;}
+
+#main{width: 100%;height: 454px;}
+#main{margin: 0 auto;padding: 0;width: 1000px;text-align: center;}
+#main .b1{border: 1px #ccc solid;}
+#main a{color: #1c6ed1;}
+.content{width: 578px;
+height: 432px;
+padding: 10px;
+line-height: 22px;
+float: left;margin-right: 10px;}
+.focus{width: 100%;height: 200px;}
+.content_list h1,.neighbor h1{font:bold 12px 宋体;color: #666;height: 24px;line-height: 24px;}
+.content_list h1 span,.neighbor span{color: #ff7300;}
+.content_list div{width: 50%;float: left;}
+.content_list dl{height: 72px;}
+.content_list dl dd,.content_list dl p{width: 210px;float: left;}
+.content_list dl dt{width: 60px;height: 60px;float: left;padding-top: 6px;}
+.content_list dl dt img,.neighbor dl dt img{width: 50px;height: 50px;border: 1px #ccc solid;}
+.flag{width: 100%;height: 90px;padding: 10px 0px;}
+.flag{margin: 0 auto;padding-left: 300px;}
+
+.aside{width: 330px;height: 100%;float: left;_margin-right:-3px;}
+.login{width: 308px;height:195px;padding: 10px;background: #ecf5fc;margin-bottom: 10px;}
+.login .imgsubmit{width: 88px;height: 30px;}
+.login li{line-height: 24px;}
+.login label{color: #1c6ed1;}
+.login input{width: 80%;height: 18px;}
+.aside p{height: 33px;width: 308px;background: #ecf5fc;line-height: 50px;font: normal 16px 宋体;padding: 17px 0px 0px 20px;}
+.neighbor{width: 328px;height: 173px;}
+.neighbor h1{background: url('..img/neighbor_bg.gif') repeat-x;border-bottom: 1px #16b3dc solid;height: 25px;line-height:25px;padding-left: 10px;}
+.neighbor dl{padding: 6px 10px;width:42% ;}
+.neighbor dt,.neighbor dl{float: left;}
+.neighbor dt{padding: 5px 8px 0px 0px;}
+.neighbor dd{line-height: 21px;}
+
+#footer{width: 100%;height: 80px;background: url('..img/footer_bg.gif') repeat-x;text-align: center;line-height: 40px;}
+#footer a{padding: 0px 8px;}

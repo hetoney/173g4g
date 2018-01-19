@@ -1,0 +1,50 @@
+.a_c{text-align: center;}
+.a_r{text-align: right;}
+.f_l{float: left;}
+.f_r{float: right;}
+.clear{clear: both;}
+
+.b{font-weight: bold;}
+body #container .b1{border: 1px #ccc solid;}
+#container .b0{border: 0px;width: auto;height: auto;}
+#container .m0{margin: 0px;}
+#container .cm{color: #1c6ed1;}
+#container.underline{text-decoration: underline;}
+
+.red{color: red;}
+.blue{color: blue;}
+.brown{color: brown;}
+.c3{color: #333;}
+.c9{color: #999;}
+
+.w3p{width: 3%;}
+.w10p{width: 10%;}
+.w15p{width: 15%;}
+.w20p{width: 20%;}
+.w50p{width: 50%;}
+
+.w9{width:9px ;}
+.w20p{width:20px ;}
+.w40{width:40px ;}
+.w76{width:76px ;}
+.w81{width:81px ;}
+.w100{width:100px ;}
+.w129{width:129px ;}
+.w175{width:175px ;}
+.w216{width:216px ;}
+.w310{width:310px ;}
+.w364{width:364px ;}
+.w500{width:500px ;}
+.w600{width:600px ;}
+
+.h26{height:26px ;}
+.h27{height:27px ;}
+.h32{height:32px ;}
+.h40{height:40px ;}
+.h50{height:50px ;}
+.h58{height:58px ;}
+.h74{height:74px ;}
+
+.pt3{padding-top: 3px;}
+.pr10{padding-right: 10px;}
+#container .mr17{margin-right: 17px;}
