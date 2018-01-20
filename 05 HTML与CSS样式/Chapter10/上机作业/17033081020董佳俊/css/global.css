@@ -1,0 +1,39 @@
+body {
+	font: normal 12px tahoma, 楷体; color:#969696;
+}
+
+body,
+ul,
+ol,
+tr,
+dl,
+dd,
+form,
+input,
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+	margin: 0px;
+	padding: 0px;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+}
+body #container a:hover {
+	color: #ff7300;
+}
+
+a img {
+	border: 0px;
+}
+
+li {
+	list-style: none;
+}
+
+input {

@@ -1,0 +1,46 @@
+/*首页顶部*/
+#continer{border: 1px #ccc solid;}
+#header{width: ;height: 80px;padding-top: 10px;}
+#header h1{width: 500px;float: left;}
+#header ul{margin-bottom: 7px;}
+#header ul li{color: #000;padding: 0px 20PX;height: 14PX;float:left;
+font: bold 14px/16px "宋体";}
+#header a:hover{color: red;}
+#header form{padding: 10px 0px 0px 0px;}
+.searchbox{width: 500px;height: 27px;line-height: 27px;padding: 0px 0px 0px 32px;
+border: 5px #1fadff solid;background: url(../img/icon.gif) no-repeat;float: left;margin-left:20px ;}
+.submit{width: 76px;height: 37px;line-height: 37px;font: bold "宋体" 16px;background: #3eb7fb;color: #fff;float: left;}
+/*首页右侧*/
+.aside{width: 330px;height: 100%;float: left;}
+.login{width: 308px;height: 180px;padding: 10px;background: #ecf5fc;margin-bottom: 10px;}
+.login .imgsubmit{width: 88px;height: 30px;}
+.login li{line-height: 24px;}
+.login label{color: #1c6ed1;}
+.login input{width: 80%;height: 18px;}
+aside p{height: 33px;width: 308px;background: #ecf5fc;line-height: 50px;font: normal 16px 宋体;margin-bottom: 10px;
+padding: 17px 0px 0px 20px;}
+.neighbor{width: 328px;height: 223px;}
+.neighbor h1{background: url(../img/neighbor_bg.gif) repeat-x;border-bottom:1px #16b3dc solid;height: 25px;line-height: 25px;
+padding-left: 10px;}
+.neighbor dl{padding: 6px 10px;width: 140px;height: 88px;}
+.neighbor dt,.neighbor dl{float: left;}
+.neighbor dt{padding: 5px 8px 0px 0px;}
+.neighbor dd{line-height: 21px;}
+/*首页主体*/
+#main{width: 100%;height: 454px; margin-left:350px ;float: left;}
+#main b1{border: 1px #ccc solid;}
+#main a{color: #1c6ed1;}
+.content{width: 578px;height: 432px;padding: 10px;line-height: 22px;float: left;margin-right: 10px;}
+.focus{width: 100%;height: 200px;}
+.content_list h1,.neighbor h1{font: bold 12px 宋体;color: #666;height: 24px;line-height: 24px;}
+.content_list span,.neighbor span{color: #ff7300;}
+.content_list div{width: 50%;float: left;}
+.content_list dl{height: 72px;}
+.content_list dl dd,.content_listdl dl p{width: 210px;float: left;}
+.content_list dl dt{width: 60px;height: 60px;float: left;padding-top: 6px;}
+.content_listdl dl dt img,.neighbor dl dt img{width: 50px;height: 50px;border: 1px #ccc solid;}
+.flag{width: 100%;height: 90px;padding: 10px 0px;}
+/*首页底部*/
+#footer{width: 100%;height: 80px;background: url(../img/footer_bg.gif) repeat-x;text-align: center;line-height: 40px;}
+#footer a{padding: 0px 8px;}
+
