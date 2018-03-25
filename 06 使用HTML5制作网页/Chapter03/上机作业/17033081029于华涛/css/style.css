@@ -1,0 +1,231 @@
+@charset"utf-8";
+body,
+ul,
+dl,
+dd,
+dt,
+ol,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+textarea,
+form,
+select,
+fieldset,
+table,
+td,
+div,
+input{
+margin: 0;
+padding: 0;
+-webkit-text-size-adjust: none;}
+.page{width: 1430px;  height: 800px;
+}
+div{
+text-align: left;}
+
+a img{
+border: 0;}
+
+body{
+color: #333;
+text-align: center;
+font: 12px "微软雅黑";}
+
+ul,
+ol,
+li{
+list-style-type: none;
+vertical-align: 0;}
+
+a{
+outline-style: none;
+color: #535353;
+text-decoration: none;}
+
+a:hover{
+color: #D40000;
+text-decoration: none;}
+
+.clear{
+height: 0;
+overflow: hidden;
+clear: both;}
+
+
+/*效果css开始*/
+
+
+/**增加超链接效果**/
+
+body{
+-webkit-backface-visibility: hidden;}
+
+/**设置显示位置**/
+
+.demo{
+margin: 0px auto;
+text-align: center;}
+
+/**设置列表容器水平浮动**/
+
+.nav li{
+position: relative;
+display: inline-block;
+transition: all 3s linear;}
+
+/**设置列表容器尺寸位置**/
+
+.nav li a{
+display: inline-block;
+widows: 120px;
+height: 120px;
+padding: 30px;
+border-radius: 50%;
+border-width: 8px;
+border-style: solid;
+}
+
+/**设置列表项鼠标悬停动作**/
+
+.nav li:hover{
+z-index: 11;
+transform: scale(9);}
+
+/**无风格**/
+
+.nav li:hover a{
+text-decoration: none;}
+
+
+/**设置第一个菜单项**/
+
+.nav li:nth-child(1) a{
+color: #4d9683;
+text-shadow: 0 1px 0 #9de3cf;
+border-color: #549e89;
+background-color: rgba(0,193,140,1);}
+
+.nav li:nth-child(1):hover a {
+color: #0f775c;
+text-shadow: 0 1px 0 #81e6c9;
+border-color: #0a8462;
+background-color: rgba(0,193,140,0.5);}
+
+/**设置第二个菜单项**/
+
+.nav li:nth-child(2) a{
+color: #be607e;
+text-shadow: 0 1px 0 #de8ba5;
+border-color: #e499b0;
+background-color: rgba(234,81,128,1);}
+
+.nav li:nth-child(2):hover a {
+color: #b12a55;
+text-shadow: 0 1px 0 #ff95b7;
+border-color: #ba3335c;
+background-color: rgba(234,81,128,.5);}
+
+/**设置第三个菜单项**/
+
+.nav li:nth-child(3) a{
+color: #5e9eb4;
+text-shadow: 0 1px 0 #adddec;
+border-color: #a2cfde;
+background-color: rgba(85,193,229,1);}
+
+.nav li:nth-child(3):hover a {
+color: #2883a2;
+text-shadow: 0 1px 0 #9cdef2;
+border-color: #4397b3;
+background-color: rgba(85,193,229,.5);}
+
+/**设置第四个菜单项**/
+
+.nav li:nth-child(4) a{
+color: #ba9d5e;
+text-shadow: 0 1px 0 #f5e0ad;
+border-color: #dcc999;
+background-color: rgba(248,198,77,1);}
+
+.nav li:nth-child(4):hover a {
+color: #ab8228;
+text-shadow: 0 1px 0 #ffe199;
+border-color: #b08f3e;
+background-color: rgba(248,198,77,.5);}
+
+/**设置第五个菜单项**/
+
+.nav li:nth-child(5) a{
+color: #b468a2;
+text-shadow: 0 1px 0 #e8acd8;
+border-color: #d8abcd;
+background-color: rgba(211,112,195,1);}
+
+.nav li:nth-child(5):hover a {
+color: #a33689;
+text-shadow: 0 1px 0 #ec97d6;
+border-color: #b7569f;
+background-color: rgba(211,112,195,.5);}
+
+/**设置第六个菜单项**/
+
+.nav li:nth-child(6) a{
+color: #b468a2;
+text-shadow: 0 1px 0 #e8acd8;
+border-color: #d8abcd;
+background-color: rgba(255,160,122,1);}
+
+.nav li:nth-child(6):hover a {
+color: #a33689;
+text-shadow: 0 1px 0 #ec97d6;
+border-color: #b7569f;
+background-color: rgba(255,160,122,.5);}
+
+/**设置第七个菜单项**/
+
+.nav li:nth-child(7) a{
+color: #b468a2;
+text-shadow: 0 1px 0 #e8acd8;
+border-color: #d8abcd;
+background-color: rgba(175,207,38,1);}
+
+.nav li:nth-child(7):hover a {
+color: #a33689;
+text-shadow: 0 1px 0 #ec97d6;
+border-color: #b7569f;
+background-color: rgba(175,207,38,.5);}
+
+/**设置菜单中字体的样式**/
+
+.nav span{
+display: block;
+line-height: 100px;
+font-size: 120px;
+font-style: normal;}
+
+
+/**设置字体**/
+.nav span:before{
+font-family: 'LigatureSymbols';
+-webkit-font-feature-settings: "liga"1,"dlig"1;
+-moz-font-feature-settings: "liga"1,"dlig"1;
+-ms-font-feature-settings: "liga"1,"dlig"1;
+font-feature-settings: "liga"1,"dlig"1;
+font-size: 80px;}
+/**导入字体**/
+@font-face{
+font-family: 'LigatureSymbols';
+src: url('../font/LigatureSymbols.eot');
+src: url('../font/LigatureSymbols.eot?#iefix') format('embedded-opentype');
+src: url('../font/LigatureSymbols.woff') format('woff'),
+url('../font/LigatureSymbols.tff') format('truetype'),
+url('../font/LigatureSymbols.svg#LigatureSymbols') format('svg'),;
+font-weight: normal;
+font-style: normal;}
+
