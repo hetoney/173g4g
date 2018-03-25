@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>文本效果</title>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			
+			.container {
+				width: 600px;
+				margin: 50px auto;
+			}
+			
+			h2 {
+				font-size: 16px;
+				margin-top: 30px;
+				color: #096;
+			}
+			
+			p {
+				margin-top: 10px;
+			}
+			p.shadow{
+				text-shadow: 2px 5px 1px rgb(51,164,217);
+			}
+			p.break{
+				width: 150px;
+				padding: 10px;
+				background: aquamarine;
+				word-wrap: break-word;
+			}
+		</style>
+	</head>
+	<body>
+	<div class="container">
+		<h2>text-shadow</h2>
+		<p class="shadow">我是阴影</p>
+		<h2>word-wrap</h2>
+		<p class="break">asdfghjkllqwertyuio</p>
+	</div>	
+	</body>
+</html>

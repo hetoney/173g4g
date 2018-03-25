@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>背景</title>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			
+			.container {
+				width: 600px;
+				margin: 50px auto;
+			}
+			
+			h2 {
+				font-size: 16px;
+				margin-top: 30px;
+				color: #096;
+			}
+			
+			p {
+				margin-top: 10px;
+			}
+			fieldset {
+				/*padding: 20px;*/
+				margin-top: 30px;
+			}
+/**backgroun-size**/
+			
+			.common {
+				height: 30px;
+				width: 100px;
+				padding: 50px;
+				background: url(img/bg_flower.gif) no-repeat;
+			}
+			
+			.image1 {
+				background-size: 60px 90px;
+			}
+			
+			.image2 {
+				background-size: cover;
+			}
+			
+			.image3 {
+				background-size: contain;
+			}
+/**background-origin**/
+			
+			.image4,
+			.image5,
+			.image6 {
+				background: url(img/bg_flower.gif) repeat;
+				padding: 30px;
+				width: 100px;
+				border: 10px rgba(0, 0, 0, .3) dashed;
+			}
+			
+			.image4 {
+				background-origin: content-box;
+				background-clip: content-box;
+			}
+			
+			.image5 {
+				background-origin: border-box;
+				background-clip: border-box;
+			}
+			
+			.image6 {
+				background-origin: padding-box;
+				background-clip: padding-box;
+			}
+
+		</style>
+	</head>
+	<body>
+		<!--父容器-->
+		<div class="container">
+			<!--background-size-->
+			<fieldset>
+				<legend>background-size</legend>
+				<h2>像素较高</h2>
+				<p class="common image1"></p>
+				<h2>cover</h2>
+				<p class="common image2"></p>
+				<h2>contain</h2>
+				<p class="common image3"></p>
+			</fieldset>
+            <fieldset>
+				<legend>background-origin</legend>
+				<h2>content-box</h2>
+				<p class="image4">我是文本我是文本我是文本我是文本我是文本我是文本我是文本我是文本我是文本我是文本我是我是文本我是文本我是文本我是文</p>
+				<h2>border-box</h2>
+				<p class="image5">我是文本我是文我是文本我是文本我是文本我是文本我是文本我是文本我是文本我是文本我是文本我是文本我是文本我是文本本</p>
+				<h2>padding-box</h2>
+				<p class="image6">我是文本我是文我是文本我是文本我是文本我是文本我是文本我是文本我是文本我是文本我是文本我是文本我是文本我是文本</p>
+			</fieldset>
+
+         </div>
+
+	</body>
+</html>
