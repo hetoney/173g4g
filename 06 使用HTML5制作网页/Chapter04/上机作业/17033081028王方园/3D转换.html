@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>3D转换</title>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			
+			.container {
+				width: 600px;
+				margin: 50px auto;
+			}
+			
+			h2 {
+				font-size: 18px;
+				margin: 30px 0 10px;
+				font-weight: normal;
+				color: #096;
+			}
+			/**设置3D**/
+			
+			.w1 {
+				-webkit-perspective: 1000px;
+				perspective: 1000px;
+				margin-top: 30px;
+			}
+			
+			.s1 {
+				-webkit-transform-style: preserve-3d;
+				transform-style: preserve-3d;
+				position: relative;
+				height: 300px;
+			}
+			
+			.s1 img:nth-child(1) {
+				z-index: 1;
+				opacity: 0.5;
+			}
+			
+			.s1 img:nth-child(2) {
+				z-index: 5;
+				position: absolute;
+			}
+			/**rotate**/
+			
+			.rotate img:nth-child(2) {
+				-webkit-transform: rotate3d(1.6, 1, 1.6, 45deg);
+				-moz-transform: rotate3d(1.6, 1, 1.6, 45deg);
+				transform: rotate3d(1.6, 1, 1.6, 45deg);
+			}
+			/**scale**/
+			
+			.scale img:nth-child(2) {
+				-webkit-transform: scaleZ(5) rotateX(45deg);
+				transform: scaleZ(5) rotateX(45deg);
+			}
+			/**translate**/
+			
+			.translate img:nth-child(2) {
+				-webkit-transform: translate3d(100px, 100px, 200px);
+				-moz-transform: translate3d(100px, 100px, 200px);
+				transform: translate3d(50px, 50px, 50px);
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--父容器-->
+		<div class="container">
+			<!--位移3D-->
+			<h2>位移3D</h2>
+			<div class="w1">
+				<div class="translate s1">
+					<img src="img/555.jpg" width="200" />
+					<img src="img/555.jpg" width="200" />
+				</div>
+			</div>
+			<!--旋转3D-->
+			<h2>旋转3D</h2>
+			<div class="w1">
+				<div class="rotate s1">
+					<img src="img/555.jpg" width="200" />
+					<img src="img/555.jpg" width="200" />
+				</div>
+			</div>
+			<!--缩放3D-->
+			<h2>缩放3D</h2>
+			<div class="w1">
+				<div class="scale s1">
+					<img src="img/555.jpg" width="200" />
+					<img src="img/555.jpg" width="200" />
+				</div>
+			</div>
+
+		</div>
+	</body>
+
+</html>
