@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>动画</title>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			
+			.container {
+				width: 600px;
+				margin: 50px auto;
+			}
+			
+			h2 {
+				font-size: 18px;
+				margin: 30px 0 10px;
+				font-weight: normal;
+				color: #096;
+			}
+			
+			.move {
+				margin-top: 20px;
+				width: 500px;
+				height: 500px;
+				border: 1px #000 solid;
+			}
+			
+			.animation {
+				width: 100px;
+				height: 100px;
+				background: red;
+				/**元素的位置**/
+				position: relative;
+				/**捆绑定义动画的名字**/
+				animation-name: myfirst;
+				/**动画时长**/
+				animation-duration: 5s;
+				/**动画播放速度**/
+				animation-timing-function: linear;
+				/**动画开始时间**/
+				animation-delay: 2s;
+				/**动画播放次数**/
+				animation-iteration-count: infinite;
+				/**是否逆向播放**/
+				animation-direction: alternate;
+				/**是否自动播放**/
+				animation-play-state: running;
+			}
+			/**定义动画**/
+			
+			@keyframes myfirst {
+				/**开始时**/
+				0% {
+					background: red;
+					left: 0px;
+					top: 0px;
+				}
+				/**25时**/
+				25% {
+					background: yellow;
+					left: 200px;
+					top: 0px;
+				}
+				/**50时**/
+				50% {
+					background: blue;
+					left: 200px;
+					top: 200px;
+				}
+				/**75时**/
+				75% {
+					background: green;
+					left: 0px;
+					top: 200px;
+				}
+				/**100时**/
+				100% {
+					background: red;
+					left: 0px;
+					top: 0px;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--父容器-->
+		<div class="container">
+			<h2>animation</h2>
+			<!--内容区-->
+			<div class="move">
+				<!--内容-->
+				<div class="animation"></div>
+			</div>
+		</div>
+	</body>
+
+</html>
