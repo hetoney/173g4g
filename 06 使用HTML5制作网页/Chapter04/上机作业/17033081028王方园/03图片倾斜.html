@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>图片倾斜</title>
+		<style >
+			*{
+			padding: 0;
+			margin: 0;
+		}
+		
+		.container{
+			width: 600px;
+			margin: 50px auto;
+		}
+		
+		h2{
+			font-size: 18px;
+			margin: 40px 0 80px;
+			font-weight: normal;
+			color: #096;
+		}
+		
+		img{
+			width: 250px ;
+			height:330px ;
+		}
+		
+		.move{
+			margin-top:20px ;
+			width: 500px;
+			height: 500px;
+			border: 1px #000 solid;
+		}
+		.skew{
+			margin-top: 20px;
+			transform: skew(10deg,10deg);
+		}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h2>图片倾斜</h2>
+			<div class="skew"><img src="img/u=2785675085,1656309913&fm=27&gp=0.jpg" /></div>
+		</div>
+	</body>
+</html>
