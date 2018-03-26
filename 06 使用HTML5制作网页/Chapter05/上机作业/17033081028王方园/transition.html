@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>过渡</title>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			
+			.container {
+				width: 600px;
+				margin: 50px auto;
+			}
+			
+			h2 {
+				font-size: 18px;
+				margin: 30px 0 10px;
+				font-weight: normal;
+				color: #096;
+			}
+			/*.move {
+				margin-top: 20px;
+				width: 500px;
+				height: 500px;
+				border: 1px #000 solid;
+			}*/
+			
+			.move {
+				width: 200px;
+				height: 200px;
+				background: #096;
+				margin: 100px auto;
+				/**依次打开简写属性*/
+				transition: width 0.5s linear;
+			}
+			/**规定过渡的样式风格
+				transition-property: width;**/
+			/**定义过渡效果所花费的时间，默认是 0。
+				transition-duration: 0.5s;**/
+			/**规定过渡效果的过程速度，默认是 "ease"。
+				transition-timing-function: ease;**/
+			/**规定过渡效果何时开始，默认是 0。
+				transition-delay: 0s;**/
+			
+			.move:hover {
+				width: 130px;
+				/*height:100px;*/
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--父容器-->
+		<div class="container">
+			<h2>transition</h2>
+			<!--内容区-->
+			<div class="move"></div>
+		</div>
+	</body>
+
+</html>
