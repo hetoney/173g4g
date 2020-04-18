@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			
+			.container {
+				width: 600px;
+				height: 600px;
+				margin: 50px auto;
+				border: 1px #295d1b solid;
+				/**设置3D**/
+				-webkit-perspective: 1200px;
+				perspective: 1200px;
+				-webkit-transform-style:preserve-3d ;
+				transform-style:preserve-3d ;
+			}
+			
+			.phone{
+				display: block;
+				width: 330px;
+				height: 450px;
+				margin: 50px auto 0 auto;
+				background: url(img/u=2785675085,1656309913&fm=27&gp=0.jpg) 0px 0px /330px 450px no-repeat;
+				box-shadow: -7px 10px 10px #333;
+				transform: rotatex(60deg) rotateY(60deg)rotateZ(-25deg);
+				transform-origin: 50% 50% 100px;
+				-ms-transform-origin: 50% 50% 100px;
+				-webkit-transform-origin: 50% 50% 100px;
+				-moz-transform-origin: 50% 50% 100px;
+				transition: all 1s ease-out;
+			}
+			
+			.phone:hover{
+				box-shadow: -100px 100px 10px #fff;
+				transform: rotate3D(0,0,0,0deg);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<a class="phone"href="javascript"></a>
+		</div>
+	</body>
+</html>

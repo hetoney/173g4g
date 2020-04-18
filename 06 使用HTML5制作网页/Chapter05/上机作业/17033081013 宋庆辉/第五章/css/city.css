@@ -1,0 +1,331 @@
+/**主体**/
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+
+/*-------- 天空背景以及动画 --------*/
+
+.stage {
+	position: relative;
+	overflow: hidden;
+	height: 600px;
+	background: #ddf5f7;
+	-webkit-animation: skyset 30s infinite linear normal;
+	-moz-animation: skyset 30s infinite linear normal;
+	-o-animation: skyset 30s infinite linear normal;
+	animation: skyset 30s infinite linear normal;
+}
+
+@keyframes skyset {
+	0% {
+		background: #ddf5f7;
+	}
+	25% {
+		background: #350847;
+	}
+	50% {
+		background: #0f192c;
+	}
+	75% {
+		background: #f9c7b8;
+	}
+	100% {
+		background: #ddf5f7;
+	}
+}
+
+
+/*-------- 天黑场景遮罩层以及动画 --------*/
+
+.nightOverlay {
+	z-index: 9999;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(15, 25, 44, 0.7);
+	opacity: 0;
+	-webkit-animation: set 110s infinite linear;
+	-moz-animation: set 110s infinite linear;
+	-o-animation: set 110s infinite linear;
+	animation: set 110s infinite linear;
+}
+
+@keyframes set {
+	0% {
+		filter: Alpha(Opacity=0);
+		opacity: 0;
+	}
+	50% {
+		filter: Alpha(Opacity=100);
+		opacity: 1;
+	}
+	100% {
+		filter: Alpha(Opacity=0);
+		opacity: 0;
+	}
+}
+
+
+/*-------- 场景组件 --------*/
+
+.skyline {
+	position: absolute;
+	z-index: 5;
+	width: 100%;
+	bottom: 26%;
+	background: url(../img/skyline.png) repeat no-repeat;
+	height: 147px;
+}
+
+.beans {
+	position: absolute;
+	z-index: 4;
+	height: 201px;
+	width: 88px;
+	bottom: 30%;
+	left: 50%;
+	background: url(../img/beans.png) no-repeat no-repeat;
+}
+
+.ground {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+}
+
+.ground.front {
+	z-index: 30;
+	background: url(../img/groundFront.png) repeat no-repeat center;
+	height: 301px;
+}
+
+.ground.mid {
+	z-index: 20;
+	background: url(../img/groundMid.png) repeat no-repeat;
+	height: 299px;
+}
+
+.ground.back {
+	z-index: 10;
+	background: url(../img/groundBack.png) repeat no-repeat center;
+	height: 281px;
+}
+
+.dowEventCenter {
+	position: absolute;
+	z-index: 12;
+	bottom: 20%;
+	left: 5%;
+	background: url(../img/dowEventCenter.png) no-repeat no-repeat center;
+	height: 236px;
+	width: 524px;
+}
+
+.planetarium {
+	position: absolute;
+	z-index: 12;
+	bottom: 18%;
+	right: 10%;
+	background: url(../img/Planetarium.png) no-repeat no-repeat center;
+	height: 285px;
+	width: 347px;
+}
+
+.friendshipShell {
+	position: absolute;
+	z-index: 21;
+	bottom: 18%;
+	left: 20%;
+	background: url(../img/friendshipShell.png) no-repeat no-repeat center;
+	height: 370px;
+	width: 231px;
+}
+
+.glockenspiel {
+	position: absolute;
+	z-index: 11;
+	bottom: 26%;
+	right: 50%;
+	background: url(../img/Glockenspiel.png) no-repeat no-repeat center;
+	height: 263px;
+	width: 137px;
+}
+
+
+/*-------- 太阳自转以及动画 --------*/
+
+.rotation {
+	position: absolute;
+	z-index: 1;
+	left: 50%;
+	top: 50%;
+	margin: -350px 0 0 -350px;
+	height: 700px;
+	width: 700px;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+	-webkit-animation: rotation 110s infinite linear;
+	-moz-animation: rotation 110s infinite linear;
+	-o-animation: rotation 110s infinite linear;
+	animation: rotation 110s infinite linear;
+}
+
+@keyframes rotation {
+	0% {
+		transform: rotate(45deg);
+	}
+	100% {
+		transform: rotate(405deg);
+	}
+}
+
+.sun,
+.moon {
+	position: absolute;
+	height: 145px;
+	width: 145px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+}
+
+.sun {
+	top: 0;
+	left: 0;
+	background: yellow;
+}
+
+.moon {
+	bottom: 0;
+	right: 0;
+	background: black;
+}
+
+
+/*-------- 云以及动画 --------*/
+
+.cloud {
+	position: absolute;
+}
+
+.cloud.small {
+	z-index: 1;
+	top: 5%;
+	left: 15%;
+	background: url(../img/cloudSmall.png) no-repeat no-repeat center;
+	height: 50px;
+	width: 89px;
+	-webkit-animation: cloudSmall 165s infinite;
+	-moz-animation: cloudSmall 165s infinite;
+	-o-animation: cloudSmall 165s infinite;
+	animation: cloudSmall 165s infinite;
+}
+
+.cloud.medium {
+	z-index: 3;
+	top: 25%;
+	left: 30%;
+	background: url(../img/cloudMedium.png) no-repeat no-repeat center;
+	height: 92px;
+	width: 159px;
+	-webkit-animation: cloudMedium 80s infinite;
+	-moz-animation: cloudMedium 80s infinite;
+	-o-animation: cloudMedium 80s infinite;
+	animation: cloudMedium 80s infinite;
+}
+
+.cloud.large {
+	z-index: 2;
+	top: 5%;
+	right: 15%;
+	background: url(../img/cloudLarge.png) no-repeat no-repeat center;
+	height: 169px;
+	width: 302px;
+	-webkit-animation: cloudLarge 105s infinite;
+	-moz-animation: cloudLarge 105s infinite;
+	-o-animation: cloudLarge 105s infinite;
+	animation: cloudLarge 105s infinite;
+}
+
+@keyframes cloudSmall {
+	0% {
+		left: -5%;
+	}
+	100% {
+		left: 105%;
+	}
+}
+
+@keyframes cloudMedium {
+	0% {
+		left: -8%;
+	}
+	100% {
+		left: 108%;
+	}
+}
+
+@keyframes cloudLarge {
+	0% {
+		right: -18%;
+	}
+	100% {
+		right: 118%;
+	}
+}
+
+
+/*-------- 气球以及动画 --------*/
+
+.balloon {
+	position: absolute;
+	z-index: 3;
+	top: 5%;
+	right: 20%;
+	background: url(../img/balloon.png) no-repeat no-repeat center;
+	height: 227px;
+	width: 157px;
+	-webkit-animation: balloon 30s infinite ease alternate;
+	-moz-animation: balloon 30s infinite ease alternate;
+	-o-animation: balloon 30s infinite ease alternate;
+	animation: balloon 30s infinite ease alternate;
+}
+
+@keyframes balloon {
+	0% {
+		right: -157px;
+		transform: rotate(0deg);
+	}
+	
+	25% {
+		right: 25%;
+		transform: rotate(30deg);
+	}
+	
+	50% {
+		right: 50%;
+		transform: rotate(60deg);
+	}
+	
+	75% {
+		right: 75%;
+		transform: rotate(30deg);
+	}
+	
+	100% {
+		right: 100%;
+		transform: rotate(0deg);
+	}
+}
+
+}
